@@ -1,0 +1,140 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    min-height: 100vh;
+
+    background: #232426;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   APP
+========================= */
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 40px 30px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.title {
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    font-size: clamp(24px, 4vw, 32px);
+
+    font-weight: 700;
+
+    color: #c2c5c9;
+}
+
+
+/* =========================
+   CARDS CONTAINER
+========================= */
+
+.cards {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(280px, 320px)
+        );
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .app {
+        padding: 35px 20px;
+    }
+
+    .cards {
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(260px, 1fr)
+            );
+
+        gap: 24px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .app {
+        padding: 30px 15px;
+    }
+
+    .title {
+        margin-bottom: 30px;
+    }
+
+    .cards {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 350px) {
+
+    .app {
+        padding: 25px 10px;
+    }
+
+}
